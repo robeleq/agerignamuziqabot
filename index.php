@@ -49,7 +49,7 @@
 	
     switch($command) {
     	case '/new':    		
-    		$reply = 'Howdy! Welcome to the AgerignaMuziqa. This is a new videos';    		
+    		$reply = apiRequestJson('tags');    		
 		$sendto = API_URL. "sendmessage?chat_id=". $chat_id. "&text=". $reply;
 		file_get_contents($sendto);
 		break;
