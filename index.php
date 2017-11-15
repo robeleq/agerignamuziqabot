@@ -3,7 +3,7 @@
     
 	define('BOT_TOKEN', '385293774:AAHJ22xJWpeXn5yjQV9w0clruTzhxocVJO0'); 
 	define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN. '/');
-
+	define('API_URL_ENDPOINT', 'http://www.agerignamuziqa.com/api/v1/');
 
 	function apiRequestJson($method) {
 	   if (!is_string($method)) {
@@ -17,7 +17,7 @@
 	    	'X-API-KEY: NjEyZTY0OGJmOTU5NGFkYjUwODQ0Y2FkNjg5NWYyY2Y=',
 	   );
 
-	   $url = API_URL_AM. $method;
+	   $url = API_URL_ENDPOINT. $method;
 
 	   $ch = curl_init($url);
 	   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
