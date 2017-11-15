@@ -37,7 +37,8 @@
 
 	   $http_code = intval(curl_getinfo($ch, CURLINFO_HTTP_CODE));
            curl_close($ch);
-	   echo $response;
+		
+	   return $response;
 	}
 	
 	// read incoming info and grab the chatID
