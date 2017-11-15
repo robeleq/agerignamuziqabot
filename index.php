@@ -72,15 +72,17 @@
     switch($command) {
     	case '/new':    		
     		$reply = 'Howdy! Welcome to the AgerignaMuziqa. This is a new videos';    		
-		apiRequest("sendmessage", array('chat_id' => $chat_id, "text" => $reply));
+		$sendto = API_URL. "sendmessage?chat_id=". $chat_id. "&text=". $reply;
 		break;
 	case '/weeklytop':    		
 		$reply = 'Howdy! Welcome to the AgerignaMuziqa. This is a weekly top 10 videos';    		
-		apiRequest("sendmessage", array('chat_id' => $chat_id, "text" => $reply));
+		$sendto = API_URL. "sendmessage?chat_id=". $chat_id. "&text=". $reply;
+		file_get_contents($sendto);
 		break;
 	default:
 		$reply = 'Howdy! Welcome to the AgerignaMuziqa.';
-		apiRequest("sendmessage", array('chat_id' => $chat_id, "text" => $reply));
+		$sendto = API_URL. "sendmessage?chat_id=". $chat_id. "&text=". $reply;
+		file_get_contents($sendto);
 		break;
     }
 ?>
